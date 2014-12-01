@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="153dp"
+        android:paddingTop="75dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="25dp"
+        android:weightSum="1">
+
+        <EditText
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/display1"
+            android:layout_weight="0.50"
+            android:paddingTop="25dp"
+            android:gravity="right" />
+
+        <Spinner
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner1"
+            android:layout_weight="0.24"
+            android:paddingLeft="25dp"
+            android:entries="@array/valuesSpinner1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="148dp"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="194dp"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:paddingRight="25dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top"
+                android:id="@+id/buttonTop"
+                android:layout_gravity="right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="198dp"
+            android:layout_height="fill_parent"
+            android:paddingLeft="25dp"
+            android:gravity="center_vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bot"
+                android:id="@+id/buttonBot" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="153dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="25dp"
+        android:weightSum="1"
+        android:id="@+id/linearLayout"
+        android:paddingTop="40dp">
+
+        <EditText
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/display2"
+            android:layout_weight="0.50"
+            android:paddingTop="25dp"
+            android:gravity="right" />
+
+        <Spinner
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner2"
+            android:layout_weight="0.24"
+            android:paddingLeft="25dp"
+            android:entries="@array/valuesSpinner2"/>
+    </LinearLayout>
+
+</LinearLayout>

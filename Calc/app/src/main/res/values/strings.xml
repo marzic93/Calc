@@ -4,5 +4,34 @@
     <string name="app_name">Calc</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string-array name="valuesList">
+        <item>Барсик</item>
+        <item>Мурзик</item>
+        <item>Васька</item>
+        <item>Рыжик</item>
+    </string-array>
+    <string-array name="animals">
+        <item>Кот</item>
+        <item>Кошка</item>
+        <item>Котёнок</item>
+        <item>Животное</item>
+    </string-array>
+    <string-array name="valuesSpinner2">
+        <item>gramm</item>
+        <item>kg</item>
+        <item>tonne</item>
+        <item>carat</item>
+        <item>ounce</item>
+        <item>pound</item>
+    </string-array>
+
+    <string-array name="valuesSpinner1">
+        <item>gramm</item>
+        <item>kg</item>
+        <item>tonne</item>
+        <item>carat</item>
+        <item>ounce</item>
+        <item>pound</item>
+    </string-array>
 
 </resources>
