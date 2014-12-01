@@ -42,9 +42,9 @@ public class MainActivity  extends Activity {
 
         ActionBar actionBar = getActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-        actionBar.addTab(actionBar.newTab().setText("Tab1")
+        actionBar.addTab(actionBar.newTab().setText("Calculator")
                 .setTabListener(tabListener));
-        actionBar.addTab(actionBar.newTab().setText("Tab2")
+        actionBar.addTab(actionBar.newTab().setText("Convector")
                 .setTabListener(tabListener));
 
 
