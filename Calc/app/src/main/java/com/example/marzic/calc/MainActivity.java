@@ -4,14 +4,16 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 
 
-public class MainActivity  extends Activity implements ActionBar.TabListener {
+public class MainActivity  extends Activity {
 
 
 
     ViewPager pager;
+
 
 
     @Override
@@ -19,36 +21,36 @@ public class MainActivity  extends Activity implements ActionBar.TabListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        ActionBar bar = getActionBar();
-        bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-        ActionBar.Tab tab = bar.newTab();
-        tab.setText("tab11");
-        tab.setTabListener(this);
-        bar.addTab(tab);
+        pager = (ViewPager) findViewById(R.id.viewpager);
+        PagerAdapter pAdapter =new TabsPagerAdapter(getFragmentManager());
+        pager.setAdapter(pAdapter);
 
-        tab = bar.newTab();
-        tab.setText("tab2");
-        tab.setTabListener(this);
-        bar.addTab(tab);
+        ActionBar.TabListener tabListener = new ActionBar.TabListener() {
+            @Override
+            public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+                pager.setCurrentItem(tab.getPosition(),true);
+            }
+
+            @Override
+            public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
+            }
+
+            @Override
+            public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
+            }
+        };
+
+        ActionBar actionBar = getActionBar();
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        actionBar.addTab(actionBar.newTab().setText("Tab1")
+                .setTabListener(tabListener));
+        actionBar.addTab(actionBar.newTab().setText("Tab2")
+                .setTabListener(tabListener));
 
 
 
-    }
 
 
-
-    @Override
-    public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
-
-    }
-
-    @Override
-    public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
-
-    }
-
-    @Override
-    public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
 
     }
 }
